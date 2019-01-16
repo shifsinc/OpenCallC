@@ -59,7 +59,7 @@ class Build(build):
         os.system("mkdir -p build/lib/opencallc")
         os.system("mkdir -p build/scripts-3.7")
         print ("Copying PYs Src...")
-        os.system("cp src/*.py build/lib/opencallc")
+        os.system("cp -r src/* build/lib/opencallc")
         print ("Generating UIs...")
         for filename in glob.glob1("modules_uic", "*.ui"):
             if have_gettext():
